@@ -1,0 +1,576 @@
+{
+ "version": 1,
+ "site": "http://www.holzbau-behmann.de/",
+ "title": "Holzbau Behmann",
+ "assistantName": "Demo-Assistent",
+ "launcherLabel": "Fragen zum Holzbau?",
+ "avatar": "img/favicon.svg",
+ "placeholder": "z. B. Macht ihr auch Gauben?",
+ "demoNote": "Demo-Assistent · antwortet nur mit öffentlichen Angaben · sendet nichts",
+ "theme": {
+  "accent": "#1f3a5a",
+  "accent-d": "#152a42",
+  "ink": "#24282c",
+  "paper": "#f5f2ec",
+  "gold": "#c4520f",
+  "font": "'Barlow', system-ui, sans-serif",
+  "serif": "'Barlow Condensed', 'Arial Narrow', sans-serif"
+ },
+ "greeting": "Grüß Gott bei Holzbau Behmann in Oberstaufen-Wengen – Zimmerei in zweiter Generation. Fragen Sie mich zu Dachstuhl, Gauben, Treppen, Innenausbau, Gerüstbau oder Kontakt.",
+ "chips": [
+  {
+   "label": "Dachstuhl"
+  },
+  {
+   "label": "Treppen"
+  },
+  {
+   "label": "Gerüst"
+  },
+  {
+   "label": "Kontakt"
+  }
+ ],
+ "stopwords": [
+  "haben",
+  "habt",
+  "gibt",
+  "gibts",
+  "ihre",
+  "euch",
+  "eure",
+  "eine",
+  "einen",
+  "einem",
+  "einer",
+  "auch",
+  "kann",
+  "koennen",
+  "wieviel",
+  "viel",
+  "welche",
+  "welcher",
+  "welches",
+  "bitte",
+  "danke",
+  "hallo",
+  "noch",
+  "dass",
+  "sind",
+  "seid",
+  "wird",
+  "werden",
+  "mich",
+  "uns",
+  "unser",
+  "ihnen",
+  "diese",
+  "dieser",
+  "moechte",
+  "moechten",
+  "gerne",
+  "frage",
+  "fuer",
+  "mein",
+  "meine",
+  "darf",
+  "ich",
+  "wir",
+  "macht",
+  "machen"
+ ],
+ "intents": [
+  {
+   "id": "greet",
+   "keywords": [
+    "hallo",
+    "servus",
+    "gruess gott",
+    "guten tag",
+    "moin",
+    "hi"
+   ],
+   "answer": "Grüß Gott! Worum geht es – Dach, Treppe, Innenausbau oder etwas anderes aus Holz?",
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "thanks",
+   "keywords": [
+    "danke",
+    "vielen dank",
+    "super",
+    "perfekt"
+   ],
+   "answer": "Gern geschehen – bis bald in Wengen!",
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "dach",
+   "weight": 4,
+   "keywords": [
+    "dachstuhl",
+    "dach",
+    "aufrichten",
+    "pfetten",
+    "balken",
+    "sparren",
+    "gaube",
+    "gauben",
+    "dachgaube",
+    "dachausbau",
+    "dachsanierung"
+   ],
+   "answer": "**Dachstuhl & Gauben** gehören zum Kern der Zimmerei Behmann: Dachstuhl aufrichten, Balken, Pfetten, Gauben – neu oder im Bestand.\nFür ein Angebot am besten kurz das Vorhaben skizzieren oder anrufen.",
+   "links": [
+    {
+     "label": "Vorhaben skizzieren",
+     "href": "#anfrage"
+    },
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "treppe",
+   "weight": 4,
+   "keywords": [
+    "treppe",
+    "treppen",
+    "treppenbau",
+    "stufen",
+    "gelaender"
+   ],
+   "answer": "**Treppenbau** ist eine der Leistungen von Holzbau Behmann. Details zu Holzarten und Ausführung bitte direkt besprechen.",
+   "links": [
+    {
+     "label": "Vorhaben skizzieren",
+     "href": "#anfrage"
+    },
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "innen",
+   "weight": 3,
+   "keywords": [
+    "innenausbau",
+    "ausbau",
+    "decke",
+    "wand",
+    "verkleidung",
+    "bauschreinerei",
+    "schreinerei",
+    "renovierung",
+    "renovieren",
+    "sanierung",
+    "reparatur",
+    "reparaturen"
+   ],
+   "answer": "Zum Angebot gehören **Innenausbau, Bauschreinerei, Renovierungen und Reparaturen** – alles rund um den Holzbau aus einer Hand.",
+   "links": [
+    {
+     "label": "Alle Leistungen",
+     "href": "#leistungen"
+    },
+    {
+     "label": "Vorhaben skizzieren",
+     "href": "#anfrage"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "aussen",
+   "weight": 3,
+   "keywords": [
+    "balkon",
+    "balkone",
+    "zaun",
+    "zaeune",
+    "gartenzaun",
+    "terrasse",
+    "holzbau"
+   ],
+   "answer": "Auch **Balkone und Zäune** aus Holz stehen auf der Leistungsliste der Zimmerei Behmann.",
+   "links": [
+    {
+     "label": "Vorhaben skizzieren",
+     "href": "#anfrage"
+    },
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "geruest",
+   "weight": 4,
+   "keywords": [
+    "geruest",
+    "gerueste",
+    "geruestbau",
+    "geruestbauer"
+   ],
+   "answer": "**Gerüstbau** macht Holzbau Behmann selbst – das Gerüst kommt also gleich mit, ohne extra Firma.",
+   "links": [
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "vorteile",
+   "weight": 2,
+   "keywords": [
+    "warum",
+    "vorteil",
+    "vorteile",
+    "qualitaet",
+    "erfahrung",
+    "beratung",
+    "aus einer hand",
+    "stammkunden",
+    "gut"
+   ],
+   "answer": "Laut Betrieb sprechen dafür: **alles aus einer Hand** mit persönlicher Betreuung, **langjährige Erfahrung**, **clevere Lösungen** und **maßgerechte Beratung** – „Wir schießen nicht über das Ziel hinaus, sondern suchen gemeinsam mit Ihnen nach der Lösung, die Sie tatsächlich brauchen.“",
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "weight": 2,
+   "keywords": [
+    "seit wann",
+    "geschichte",
+    "tradition",
+    "generation",
+    "familie",
+    "familienbetrieb",
+    "gegruendet",
+    "gruender",
+    "oskar",
+    "christian",
+    "chef",
+    "inhaber",
+    "meister",
+    "zimmermeister",
+    "innung"
+   ],
+   "answer": "Die Zimmerei Behmann ist ein Familienbetrieb in **zweiter Generation**: gegründet von **Oskar Behmann**, seit **2002** geführt von seinem Sohn **Christian Behmann, Zimmermeister**. Der Betrieb ist Mitglied der Zimmerer-Innung Lindau.",
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "address",
+   "weight": 3,
+   "keywords": [
+    "adresse",
+    "anfahrt",
+    "wo seid",
+    "wo sind",
+    "wo ist",
+    "wo liegt",
+    "wie komme",
+    "route",
+    "navi",
+    "wengen",
+    "oberstaufen",
+    "finden"
+   ],
+   "answer": "**Holzbau Behmann**\nWengen 33\n87534 Oberstaufen",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.5561547&mlon=10.0454279#map=16/47.5561547/10.0454279"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "contact",
+   "weight": 2,
+   "keywords": [
+    "telefon",
+    "anrufen",
+    "nummer",
+    "erreichen",
+    "kontakt",
+    "email",
+    "e mail",
+    "mail",
+    "fax",
+    "ansprechpartner"
+   ],
+   "answer": "**Kontakt**\nTel.: 08386 1681\nFax: 08386 1676\nE-Mail: info@holzbau-behmann.de\nAnsprechpartner: Christian Behmann, Zimmermeister",
+   "links": [
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:info@holzbau-behmann.de"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  },
+  {
+   "id": "hours",
+   "weight": 2,
+   "keywords": [
+    "oeffnungszeiten",
+    "geoeffnet",
+    "offen",
+    "wann",
+    "uhrzeit",
+    "samstag",
+    "buero",
+    "buerozeiten"
+   ],
+   "answer": "Bürozeiten stehen noch nicht auf der Website. Am besten einfach anrufen: **08386 1681**.",
+   "links": [
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ]
+  },
+  {
+   "id": "price",
+   "weight": 11,
+   "keywords": [
+    "kostet",
+    "preis",
+    "preise",
+    "kosten",
+    "angebot",
+    "kostenvoranschlag",
+    "quadratmeter",
+    "euro",
+    "teuer",
+    "guenstig",
+    "stundensatz"
+   ],
+   "answer": "Preise stehen nicht online – jedes Vorhaben ist anders. Skizzieren Sie es kurz im Formular oder rufen Sie an, dann gibt es ein Angebot.",
+   "links": [
+    {
+     "label": "Vorhaben skizzieren",
+     "href": "#anfrage"
+    },
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    }
+   ]
+  },
+  {
+   "id": "unknown",
+   "weight": 3,
+   "keywords": [
+    "holzhaus",
+    "fertighaus",
+    "holzrahmenbau",
+    "aufstockung",
+    "carport",
+    "dachdecker",
+    "dachdeckung",
+    "spengler",
+    "foerderung",
+    "energieberatung",
+    "statik",
+    "pv",
+    "photovoltaik",
+    "ausbildung",
+    "lehrstelle",
+    "job",
+    "stellen"
+   ],
+   "answer": "Dazu steht auf der Website noch nichts – am besten direkt bei Christian Behmann fragen: **08386 1681**.",
+   "links": [
+    {
+     "label": "08386 1681 anrufen",
+     "href": "tel:+4983861681"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:info@holzbau-behmann.de"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Dachstuhl"
+    },
+    {
+     "label": "Treppen"
+    },
+    {
+     "label": "Gerüst"
+    },
+    {
+     "label": "Kontakt"
+    }
+   ]
+  }
+ ],
+ "menu": {
+  "foundPrefix": "",
+  "links": [],
+  "followChips": [],
+  "sections": []
+ },
+ "fallback": {
+  "text": "Das kann ich leider nicht sicher beantworten – ich kenne nur die öffentlichen Angaben (Leistungen, Betrieb, Kontakt). Rufen Sie gern an: **08386 1681**.",
+  "links": [
+   {
+    "label": "08386 1681 anrufen",
+    "href": "tel:+4983861681"
+   }
+  ]
+ }
+}

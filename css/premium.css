@@ -1,0 +1,27 @@
+/* Premium-Schicht: Intro (Giebel wird gezeichnet), Blatt-Anzeige */
+.intro{display:none}
+html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;cursor:pointer;overflow:hidden;background:var(--bp),var(--blau);animation:introFailsafe .01s 4.2s forwards;transition:opacity .6s,transform .7s cubic-bezier(.7,0,.25,1)}
+@keyframes introFailsafe{to{visibility:hidden;pointer-events:none}}
+.intro-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.intro-gable{width:min(60vmin,420px);height:auto;overflow:visible}
+.intro-gable path{fill:none;stroke:#fff;stroke-width:2.4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .8s var(--ease) forwards}
+.intro-gable path:nth-child(2){animation-delay:.4s}
+.intro-gable .ig-dim{stroke:var(--gelb);stroke-width:1.2;animation-delay:.7s}
+.intro-cb{margin:-.2em 0 0;font:800 clamp(3rem,10vw,6rem)/1 var(--cond);color:var(--gelb);opacity:0;animation:nbIn .4s .6s forwards}
+.intro-name{margin:.1rem 0 0;font:800 clamp(1.4rem,3.4vw,2.2rem)/1 var(--cond);text-transform:uppercase;letter-spacing:.08em;color:#fff;opacity:0;animation:nbIn .4s .85s forwards}
+.intro-hand{margin:.5rem 0 0;font:400 1.8rem/1 var(--hand);color:#cfdbe6;opacity:0;animation:nbIn .4s 1.05s forwards}
+@keyframes nbIn{to{opacity:1}}
+.intro-skip{position:absolute;right:1.4rem;bottom:1.4rem;background:var(--sand);border:0;color:var(--ink);font:600 .85rem/1 var(--mono);padding:.8rem 1.1rem;cursor:pointer}
+.intro-skip:focus-visible{outline:2px solid #fff;outline-offset:2px}
+html.intro-out .intro{opacity:0;transform:translateY(-4%);pointer-events:none}
+
+/* Blatt-Anzeige */
+.blatt-ind{position:fixed;left:1.2rem;bottom:1.2rem;z-index:30;display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;border:1.5px solid var(--ink);background:var(--sand);font:400 .7rem/1 var(--mono);opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none;box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+.bi-k{padding:.45rem .6rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);text-transform:uppercase;letter-spacing:.12em}
+.bi-no{padding:.45rem .6rem;border-bottom:1px solid var(--ink);font-weight:600;color:var(--orange)}
+.bi-l{grid-column:1/-1;padding:.5rem .6rem;font:800 1rem/1 var(--cond);text-transform:uppercase;letter-spacing:.04em;position:relative;overflow:hidden}
+.bi-l::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:calc(var(--sp,0) * 100%);background:var(--blau)}
+.blatt-ind.show{opacity:1;transform:none}
+.blatt-ind.over-hero,.blatt-ind.over-foot{opacity:0;transform:translateY(10px)}
+@media (max-width:1279px){.blatt-ind{display:none}}
+@media (prefers-reduced-motion:reduce){.intro{display:none!important}}
