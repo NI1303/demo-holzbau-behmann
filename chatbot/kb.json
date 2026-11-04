@@ -584,5 +584,10 @@
     "href": "tel:+4983861681"
    }
   ]
+ },
+ "handoff": {
+  "tel": "+4983861681",
+  "telLabel": "08386 1681",
+  "mail": "info@holzbau-behmann.de"
  }
 }
