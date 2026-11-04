@@ -1,0 +1,15 @@
+/* Holzbau Behmann – liebevolle Details (Blaupause, Werkplan). Wird von liebe_inject.py nicht überschrieben. */
+:root{--lv-hand:'Reenie',cursive;--lv-ink:#1f3a5a;--lv-ul:#1f3a5a;--lv-tex-o:.32;--lv-note-fs:1.6rem;--lv-ul-w:200px;--lv-egg-fs:1.5rem}
+.gruende,.anfrage{--lv-ink:#f2b705;--lv-ul:#f2b705}
+.footer .richt{position:relative}
+.lv-egg-level{--lv-egg-ink:#f2b705}
+.lv-egg-level .lv-bubble{transition:transform .25s ease-out}
+.lv-egg-level.lv-level-ok .lv-bubble{fill:#7fd18b}
+.lv-egg-level .lv-egg-msg{white-space:normal;width:15rem}
+.lv-egg-level.lv-egg-on .lv-egg-btn{animation:lvWobble .9s ease}
+@keyframes lvWobble{20%{transform:rotate(-4deg)}50%{transform:rotate(3deg)}80%{transform:rotate(-1deg)}100%{transform:none}}
+.footer .lv-foot{--lv-foot-heart:#f2b705}
+@media (max-width:899px){.lv-egg-level{position:relative!important;left:auto!important;bottom:auto!important;margin:1rem 0 0!important;flex-wrap:wrap}}
+@media (prefers-reduced-motion:reduce){.lv-egg-level.lv-egg-on .lv-egg-btn{animation:none}}
+.lv-404{--lv-404-bg:#1f3a5a;--lv-404-ink:#eef3f8;--lv-404-accent:#f2b705;--lv-404-btn-ink:#1f3a5a;--lv-404-font:'Barlow',system-ui,sans-serif;--lv-404-display:'Barlow Condensed','Barlow',sans-serif;--lv-404-r:2px;--lv-404-hw:400}
+.lv-404-art{color:#f2b705}

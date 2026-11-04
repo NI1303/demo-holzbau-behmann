@@ -16,7 +16,7 @@
   "font": "'Barlow', system-ui, sans-serif",
   "serif": "'Barlow Condensed', 'Arial Narrow', sans-serif"
  },
- "greeting": "Grüß Gott bei Holzbau Behmann in Oberstaufen-Wengen – Zimmerei in zweiter Generation. Fragen Sie mich zu Dachstuhl, Gauben, Treppen, Innenausbau, Gerüstbau oder Kontakt.",
+ "greeting": "Grüß Gott aus Wengen! Ich bin der Demo-Assistent von Holzbau Behmann, Zimmerei in zweiter Generation. Fragen Sie mich gern zu Dachstuhl, Gauben, Treppen, Innenausbau, Gerüstbau – oder wie Sie uns am schnellsten erreichen.",
  "chips": [
   {
    "label": "Dachstuhl"
@@ -395,7 +395,19 @@
     "navi",
     "wengen",
     "oberstaufen",
-    "finden"
+    "finden",
+    "wo finde",
+    "finde ich",
+    "wo finden",
+    "wo seid ihr",
+    "wo genau",
+    "wie kommt man",
+    "komme ich hin",
+    "hinkommen",
+    "hinfahren",
+    "wegbeschreibung",
+    "standort",
+    "anschrift"
    ],
    "answer": "**Holzbau Behmann**\nWengen 33\n87534 Oberstaufen",
    "links": [
